@@ -6,8 +6,8 @@ class UsrMng_Access(db.Model):
     quaUSERNAME = db.Column (db.String(255), nullable=False)
     quaPASSWORD = db.Column (db.String(255), nullable=False)
     quaEMAIL= db.Column (db.String(255), nullable=False)
-    quaID_ANAGRAPHIC = db.Column(db.Integer, db.ForeignKey('Questionari_UserManagement_Anagraphic.quanID'), nullable=False)
-    quaID_PERMISSION = db.Column(db.Integer, db.ForeignKey('Questionari_UserManagement_Permission.qupID'), nullable=False)
+    quaID_ANAGRAPHIC = db.Column(db.Integer, db.ForeignKey('UsrMng_Anagraphic.quanID'), nullable=False)
+    quaID_PERMISSION = db.Column(db.Integer, db.ForeignKey('UsrMng_Permission.qupID'), nullable=False)
 
 class UsrMng_Anagraphic(db.Model):
     quanID = db.Column (db.Integer, primary_Key=True, autoincrement=True)
