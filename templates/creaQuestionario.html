@@ -1,0 +1,19 @@
+
+    
+
+
+<div class="col-lg-6">
+    <h4 class="contact-title">Get in touch</h4>
+    <form action="{{url_for('crea.index')}}" method="POST" class="contact-form">
+        <input name="nome" type="text" placeholder="Name">
+        <input name="email" type="email" placeholder="E-mail">
+        <input name="subject" type="text" placeholder="Subject">
+        <textarea name="text" placeholder="Message"></textarea>
+        <button type="submit" class="site-btn sb-c1">Submit</button>
+    </form>
+</div>
+
+
+{% if var %}
+{{var}} {{var2}} {{var3}}
+{% endif %}
