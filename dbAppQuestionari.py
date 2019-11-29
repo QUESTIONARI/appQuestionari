@@ -1,14 +1,15 @@
 from app import app, db
-from app.models.modelsUser import UsrMng_Access
+from app.models.modelsUser import *
+
 
 db.create_all()
 
-admin= UsrMng_Access(quaID='1', quaUSERNAME='carlo', quaPASSWORD='ajhaj', quaEMAIL='fdhfj', quaID_ANAGRAPHIC='3', quaID_PERMISSION='1', quaQUESTIONARIE='4')
-guest= UsrMng_Access(quaID='2', quaUSERNAME='emanuele', quaPASSWORD='ajhaj', quaEMAIL='fdhfj', quaID_ANAGRAPHIC='3', quaID_PERMISSION='1', quaQUESTIONARIE='4')
+admin= UsrMng_Access(quaUSERNAME='carlo', quaPASSWORD='ajhaj')
+guest= UsrMng_Access(quaUSERNAME='emanuele', quaPASSWORD='ajhaj')
 
 db.session.add(admin)
 db.session.add(guest)
-db.session.committ()
+db.session.commit()
 
 everyone = UsrMng_Access.query.all()
 print(str(everyone))

@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+
+
 # from controllers.creaController import crea_bp
 # from controllers.homeController import home_bp
 # from controllers.svolgiController import svolgi_bp
