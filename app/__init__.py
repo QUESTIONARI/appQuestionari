@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from app.settings.config import SQLALCHEMY_DATABASE_URI
 
 
 # from controllers.creaController import crea_bp
@@ -7,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 # from controllers.svolgiController import svolgi_bp
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI']= SQLALCHEMY_DATABASE_URI
 db = SQLAlchemy(app)
 
 
